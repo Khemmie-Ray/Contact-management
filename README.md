@@ -27,7 +27,7 @@ The Contact Management System is a user-friendly tool designed to streamline the
 
 ### Screenshots
 
-![Screenshots]()
+![Screenshots](./src/assets/screenshot.png)
 
 ### Links
 
