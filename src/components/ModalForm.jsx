@@ -5,12 +5,25 @@ const ModalForm = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
+    const emailVal = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneVal = /^\d{10}$/;
+
     const handleSubmit = (e) => {
         e.preventDefault();
     
         if (!name || !email || !phone) {
-          alert('Please fill in all fields');
-          return;
+            alert('Please fill in all fields');
+            return;
+          }
+      
+        if (!emailVal.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+      
+        if (!phoneVal.test(phone)) {
+            alert('Please enter a valid 10-digit phone number - 8190898989');
+            return;
         }
     
         const newContact = {
